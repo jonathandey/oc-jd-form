@@ -1,0 +1,24 @@
+{{ form_open({ class: 'form-horizontal' }) }}
+    {{ __SELF__.render() | raw }}
+    <div class="form-buttons">
+        <div class="loading-indicator-container">
+            <button
+                type="submit"
+                data-request="onSave"
+                data-hotkey="ctrl+s, cmd+s"
+                data-load-indicator="Creating Organisation..."
+                class="btn btn-primary">
+                Create
+            </button>
+            <button
+                type="button"
+                data-request="onSave"
+                data-request-data="close:1"
+                data-hotkey="ctrl+enter, cmd+enter"
+                data-load-indicator="Creating Organisation..."
+                class="btn btn-default">
+                Create and Close
+            </button>
+        </div>
+    </div>
+{{ form_close() }}
