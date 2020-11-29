@@ -46,6 +46,7 @@ $this->controller->addComponent("jdForm", "jdForm", [
 
 ## Override form field templates (untested)
 _Borrowed from https://octobercms.com/plugin/luketowers-easyforms_
+
 You can easily override any backend partial that would be rendered by the form & it's included widgets by replicating the desired partial under the `themes/$activeTheme/partials/$componentAlias` directory. If a match isn't found in that directory it will fall back by looking at the `themes/$activeTheme/partials/jdForm` directory.
 
 In order for a given partial to be overridden, it must be copied under the above directory using the exact same (case-sensitive) application root relative path as where it exists normally. For instance, if you wanted to override the `/path/to/october/modules/backend/widgets/form/partials/_field_text.htm` partial, then you would need to create a file under `/path/to/october/themes/$activeTheme/partials/$widgetAlias/modules/backend/widgets/form/partials/_field_text.htm`.
