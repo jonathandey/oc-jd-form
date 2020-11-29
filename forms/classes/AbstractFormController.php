@@ -17,7 +17,6 @@ class AbstractFormController extends Controller {
     {
         $this->formConfig = [
             'modelClass' => $modelClass,
-            // 'form' => '$/jd/koibuyer/models/organisation/fields.yaml'
             'form' => $fieldsDefinition
         ];
 

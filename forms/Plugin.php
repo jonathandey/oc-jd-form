@@ -17,31 +17,11 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'Forms',
-            'description' => 'No description provided yet...',
+            'name'        => 'JD Forms',
+            'description' => 'An OctoberCMS plugin that enables you to use backend forms on the front-end.',
             'author'      => 'JD',
-            'icon'        => 'icon-leaf'
+            'icon'        => 'icon-list'
         ];
-    }
-
-    /**
-     * Register method, called when the plugin is first registered.
-     *
-     * @return void
-     */
-    public function register()
-    {
-
-    }
-
-    /**
-     * Boot method, called right before the request route.
-     *
-     * @return array
-     */
-    public function boot()
-    {
-
     }
 
     /**
@@ -53,43 +33,6 @@ class Plugin extends PluginBase
     {
         return [
             Form::class => 'jdForm',
-        ];
-    }
-
-    /**
-     * Registers any back-end permissions used by this plugin.
-     *
-     * @return array
-     */
-    public function registerPermissions()
-    {
-        return []; // Remove this line to activate
-
-        return [
-            'jd.forms.some_permission' => [
-                'tab' => 'Forms',
-                'label' => 'Some permission'
-            ],
-        ];
-    }
-
-    /**
-     * Registers back-end navigation items for this plugin.
-     *
-     * @return array
-     */
-    public function registerNavigation()
-    {
-        return []; // Remove this line to activate
-
-        return [
-            'forms' => [
-                'label'       => 'Forms',
-                'url'         => Backend::url('jd/forms/mycontroller'),
-                'icon'        => 'icon-leaf',
-                'permissions' => ['jd.forms.*'],
-                'order'       => 500,
-            ],
         ];
     }
 }
